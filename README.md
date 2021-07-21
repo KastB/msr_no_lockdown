@@ -13,5 +13,11 @@ Make sure the kernel headers are installed
 make
 sudo make install
 sudo depmod -a
-sudo modprobe r8169
+sudo mokutil --disable-validation
+sudo modprobe msr_no_lockdown
 ```
+
+oder über dkms:
+```
+sudo ./install.sh
+``` 
